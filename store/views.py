@@ -2,5 +2,5 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def slider(request):
-    return render(request, 'store/homepage.html', {})
+def index(request):
+    return render(request, 'store/index.html', {})
