@@ -1,0 +1,7 @@
+.slider .carousel-item img {
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+  }
+
+.slider .carousel-control-prev, .carousel-control-next{
+    height: 250px;
+}
