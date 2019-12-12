@@ -3,5 +3,7 @@ from . import views
 
 app_name = 'store'
 urlpatterns = [
-    path('slider', views.slider),
+    path('', views.slider),
+    path('base', views.base),
+    path('header', views.header, name = 'header'),
 ]

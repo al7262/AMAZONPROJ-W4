@@ -4,3 +4,9 @@ from django.shortcuts import render
 
 def slider(request):
     return render(request, 'store/slider-banner.html', {})
+
+def header(request):
+    return render(request, 'header.html', {})
+
+def base(request):
+    return render(request, 'store/base.html', {})
