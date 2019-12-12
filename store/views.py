@@ -7,6 +7,3 @@ def slider(request):
 
 def header(request):
     return render(request, 'header.html', {})
-
-def base(request):
-    return render(request, 'store/base.html', {})
