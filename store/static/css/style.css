@@ -36,6 +36,10 @@
 }
 
 /* BEST PRODUCT */
+.bg-gray{
+    background-color: lightgray;
+}
+
 .box{
     background-color: white;
     border: 1px solid lightgrey;
@@ -117,8 +121,7 @@
 }
 
 .home-start{
-    position: absolute;
-    top: 250px;
+    margin-top: -350px;
 }
 
 .item-btn{
