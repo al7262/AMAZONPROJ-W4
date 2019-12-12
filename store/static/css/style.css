@@ -1,6 +1,7 @@
 /* BEST PRODUCT */
 .box{
     background-color: white;
+    border: 1px solid lightgrey;
     width: 100%;
     padding: 10px 20px;
 }
@@ -35,6 +36,7 @@
 
 .box-50{
     width:100%;
+    max-height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
