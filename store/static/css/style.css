@@ -1,8 +1,50 @@
+/* ARROW */
+.arrow {
+    background: url('https://m.media-amazon.com/images/G/01/AUIClients/AmazonGatewayAuiAssets-gw_sprite_desktop-25075f36f083535bad9a2e0edabbb339435e8e65._V2_.png');
+    background-repeat: no-repeat;
+}
+.arrow.back-banner{
+    width: 30px;
+    height: 51px;
+    background-position: 0 -184px;
+}
+
+.arrow.next-banner{
+    width: 30px;
+    height: 51px;
+    background-position: -30px -184px;
+}
+
+.arrow.back-product{
+    width: 13px;
+    height: 25px;
+    background-position: -13px -22px;
+}
+
+.arrow.next-product{
+    width: 13px;
+    height: 25px;
+    background-position: 0 -22px;
+}
+
+/* BANNER */
+.slider .carousel-item img {
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+  }
+.slider .carousel-control-prev, .carousel-control-next{
+    height: 250px;
+}
+
 /* BEST PRODUCT */
+.bg-gray{
+    background-color: lightgray;
+}
+
 .box{
     background-color: white;
+    border: 1px solid lightgrey;
     width: 100%;
-    padding: 10px 20px;
+    padding: 15px 20px !important;
 }
 
 .outer{
@@ -29,15 +71,80 @@
     line-height: 19px;
 }
 
-.product{
+.product, 
+.product2, 
+.product3,
+.product4 {
     padding: 20px 0;
 }
 
-.box-50{
+.product .carousel-control-prev, 
+.product2 .carousel-control-prev, 
+.product3 .carousel-control-prev, 
+.product4 .carousel-control-prev {
+    position: absolute;
+    top: 50px;
+    align-items: center;
+    background-color:#fff;
+    height: 100px;
+    line-height: 100px;
+    width: 45px;
+    text-align: center;
+    box-shadow: 0 1px 3px#888;
+    opacity: 0.3;
+}
+
+.product .carousel-control-next, 
+.product2 .carousel-control-next, 
+.product3 .carousel-control-next, 
+.product4 .carousel-control-next {
+    position: absolute;
+    top: 50px;
+    align-items: center;
+    background-color:#fff;
+    height: 100px;
+    line-height: 100px;
+    width: 45px;
+    text-align: center;
+    box-shadow: 0 1px 3px#888;
+    opacity: 0.3;
+}
+
+.box-200{
     width:100%;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 40px;
+}
+
+.home-start{
+    margin-top: -350px;
+}
+
+.item-btn{
+    background-color: #f1f1f1;
+    border: 0.5px solid gray;
+    width: 90%;
+    font-size: 15px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    top: 150px;
+    display: none;
+    opacity: 1;
+    padding: 5px 0;
+    border-radius: 5px;
+}
+
+.item-btn:hover{
+    background-color: lightgrey;
+    color: black;
+    text-decoration-line: none;
+}
+
+.item img:hover + .item-btn, .item-btn:hover {
+    display: inline-block;
 }
