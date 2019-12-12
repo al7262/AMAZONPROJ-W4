@@ -597,3 +597,55 @@ div.col-md-3.bottom_link.khusus1 {
   
   .dropdown:hover .dropdown-content {display: block;}
 
+/* =============================== Cart 0 ======================================= */
+
+.cart_empty h1 {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    margin: 0%;
+}
+
+.cart_empty {
+    border-bottom: 1px solid #E9E9E9;
+}
+
+.also_bought {
+    border: 1px solid #DDDDDD;
+    border-radius: 10%;
+    padding-top: 40px;
+    padding-left: 20px;
+
+}
+
+.also_bought h5 {
+    font-size: 15px;
+}
+
+.see_all_option {
+    background-color: #E9EBEE;
+    color: black;
+    text-align: center;
+    border-radius: 10%;
+}
+
+.gambar_barangcart{
+    padding-left: 0px;
+}
+
+.detail_gambar_barangcart p{
+    margin-bottom: 0px;
+}
+
+.gambar_barangcart img {
+    height: 100px;
+    width: 100px;
+}
+
+.costumer_suggest_cart {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.per_barang {
+    padding-bottom: 20px;
+}
