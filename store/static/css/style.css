@@ -1,0 +1,43 @@
+/* BEST PRODUCT */
+.box{
+    background-color: white;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.outer{
+    padding: 10px 20px;
+}
+
+.title-box{
+    display: flex;
+    align-items: center;
+}
+
+.title-box h2{
+    margin-bottom:0;
+    font-size: 21px;
+    margin-right: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+    padding-bottom: 0;
+}
+
+.title-box a{
+    margin-bottom: 0;
+    font-size: 10px;
+    line-height: 19px;
+}
+
+.product{
+    padding: 20px 0;
+}
+
+.box-50{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+}
