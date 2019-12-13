@@ -684,3 +684,14 @@ div.col-md-3.bottom_link.khusus1 {
     padding-left: 170px;
     padding-top: 10px;
 }
+
+.list_barang_cart {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.sum_price_cart {
+    text-align: end;
+    padding-top: 10px;
+}
