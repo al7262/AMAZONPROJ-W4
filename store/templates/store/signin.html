@@ -4,9 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-        <link rel="stylesheet" href="bootstrap.min.css">
-        <link rel="stylesheet" href="signin.css">
+        <title>Sign In</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'signin.css' %}">
     </head>
 <body>
     <div class="container">
@@ -27,12 +28,9 @@
 
                     <label for="email"><b>Email (phone for mobile account)</b></label>
                     <input type="text" placeholder="Enter Email" name="email" required>
-<<<<<<< HEAD
 
                     <label for="password"><b>Password</b></label>
                     <input type="text" placeholder="Enter Password" name="password" required>
-=======
->>>>>>> branchlian
                      
                     <div class="clearfix">
                         <button type="submit" class="signupbtn">Create your Amazon account</button>
