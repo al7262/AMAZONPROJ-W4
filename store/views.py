@@ -16,3 +16,6 @@ def cart0(request):
 
 def cart1(request):
     return render(request, 'store/cart1.html', {})
+
+def search(request):
+    return render(request, 'store/search.html', {})
