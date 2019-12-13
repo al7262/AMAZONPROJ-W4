@@ -1,51 +1,51 @@
-.carousel-inner .active,
-.carousel-inner .active + .carousel-item,
-.carousel-inner .active + .carousel-item + .carousel-item,
-.carousel-inner .active + .carousel-item + .carousel-item + .carousel-item,
-.carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
-.carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+.product .carousel-inner .active,
+.product .carousel-inner .active + .carousel-item,
+.product .carousel-inner .active + .carousel-item + .carousel-item,
+.product .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item,
+.product .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
     display: block;
 }
 
-.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
-.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
-.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item,
-.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
-.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+.product .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+.product .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+.product .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+.product .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item,
+.product .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
     transition: none;
 }
 
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
+.product .carousel-inner .carousel-item-next,
+.product .carousel-inner .carousel-item-prev {
     position: relative;
     transform: translate3d(0, 0, 0);
 }
 
-.carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+.product .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
     position: absolute;  
     top: 0;
     right: -16.66666667%;
-    z-index: -1;
+    z-index: 0;
     display: block;
     visibility: visible;
 }
 
 /* left or forward direction */
-.active.carousel-item-left + .carousel-item-next.carousel-item-left,
-.carousel-item-next.carousel-item-left + .carousel-item,
-.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
-.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
-.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
-.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
-.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+.product .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+.product .carousel-item-next.carousel-item-left + .carousel-item,
+.product .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+.product .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+.product .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
     position: relative;
     transform: translate3d(-100%, 0, 0);
     visibility: visible;
 }
 
 /* farthest right hidden item must be abso position for animations */
-.carousel-inner .carousel-item-prev.carousel-item-right {
+.product .carousel-inner .carousel-item-prev.carousel-item-right {
     position: absolute;
     top: 0;
     left: 0;
@@ -55,13 +55,229 @@
 }
 
 /* right or prev direction */
-.active.carousel-item-right + .carousel-item-prev.carousel-item-right,
-.carousel-item-prev.carousel-item-right + .carousel-item,
-.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
-.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
-.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
-.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
-.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {    
+.product .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+.product .carousel-item-prev.carousel-item-right + .carousel-item,
+.product .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+.product .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+.product .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {    
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+}
+
+/* for product 1 */
+.product1 .carousel-inner .active,
+.product1 .carousel-inner .active + .carousel-item,
+.product1 .carousel-inner .active + .carousel-item + .carousel-item,
+.product1 .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item,
+.product1 .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product1 .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    display: block;
+}
+
+.product1 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+.product1 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+.product1 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+.product1 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item,
+.product1 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product1 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    transition: none;
+}
+
+.product1 .carousel-inner .carousel-item-next,
+.product1 .carousel-inner .carousel-item-prev {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+}
+
+.product1 .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: absolute;  
+    top: 0;
+    right: -16.66666667%;
+    z-index: 0;
+    display: block;
+    visibility: visible;
+}
+
+/* left or forward direction */
+.product1 .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+.product1 .carousel-item-next.carousel-item-left + .carousel-item,
+.product1 .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+.product1 .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+.product1 .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product1 .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product1 .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+}
+
+/* farthest right hidden item must be abso position for animations */
+.product1 .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+}
+
+/* right or prev direction */
+.product1 .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+.product1 .carousel-item-prev.carousel-item-right + .carousel-item,
+.product1 .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+.product1 .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+.product1 .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product1 .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product1 .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {    
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+}
+
+/* for product 2 */
+.product2 .carousel-inner .active,
+.product2 .carousel-inner .active + .carousel-item,
+.product2 .carousel-inner .active + .carousel-item + .carousel-item,
+.product2 .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item,
+.product2 .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product2 .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    display: block;
+}
+
+.product2 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+.product2 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+.product2 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+.product2 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item,
+.product2 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product2 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    transition: none;
+}
+
+.product2 .carousel-inner .carousel-item-next,
+.product2 .carousel-inner .carousel-item-prev {
+    position: relative;
+    transform: translate2d(0, 0, 0);
+}
+
+.product2 .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: absolute;  
+    top: 0;
+    right: -16.66666667%;
+    z-index: 0;
+    display: block;
+    visibility: visible;
+}
+
+/* left or forward direction */
+.product2 .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+.product2 .carousel-item-next.carousel-item-left + .carousel-item,
+.product2 .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+.product2 .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+.product2 .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product2 .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product2 .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate2d(-100%, 0, 0);
+    visibility: visible;
+}
+
+/* farthest right hidden item must be abso position for animations */
+.product2 .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+}
+
+/* right or prev direction */
+.product2 .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+.product2 .carousel-item-prev.carousel-item-right + .carousel-item,
+.product2 .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+.product2 .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+.product2 .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product2 .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product2 .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {    
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+}
+
+/* for product 3 */
+.product3 .carousel-inner .active,
+.product3 .carousel-inner .active + .carousel-item,
+.product3 .carousel-inner .active + .carousel-item + .carousel-item,
+.product3 .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item,
+.product3 .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product3 .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    display: block;
+}
+
+.product3 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+.product3 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+.product3 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+.product3 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item,
+.product3 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product3 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    transition: none;
+}
+
+.product3 .carousel-inner .carousel-item-next,
+.product3 .carousel-inner .carousel-item-prev {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+}
+
+.product3 .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: absolute;  
+    top: 0;
+    right: -16.66666667%;
+    z-index: 0;
+    display: block;
+    visibility: visible;
+}
+
+/* left or forward direction */
+.product3 .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+.product3 .carousel-item-next.carousel-item-left + .carousel-item,
+.product3 .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+.product3 .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+.product3 .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product3 .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product3 .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+}
+
+/* farthest right hidden item must be abso position for animations */
+.product3 .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+}
+
+/* right or prev direction */
+.product3 .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+.product3 .carousel-item-prev.carousel-item-right + .carousel-item,
+.product3 .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+.product3 .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+.product3 .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product3 .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+.product3 .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {    
     position: relative;
     transform: translate3d(100%, 0, 0);
     visibility: visible;
