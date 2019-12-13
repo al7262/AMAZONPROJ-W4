@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
@@ -11,3 +12,8 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     details = RichTextField()
     photo = models.ImageField()
+=======
+from django.db import models
+
+# Create your models here.
+>>>>>>> branchlian
