@@ -597,3 +597,101 @@ div.col-md-3.bottom_link.khusus1 {
   
   .dropdown:hover .dropdown-content {display: block;}
 
+/* =============================== Cart 0 ======================================= */
+
+.cart_empty h1 {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    margin: 0%;
+}
+
+.cart_empty {
+    border-bottom: 1px solid #E9E9E9;
+}
+
+.also_bought {
+    border: 1px solid #DDDDDD;
+    border-radius: 10%;
+    padding-top: 40px;
+    padding-left: 20px;
+
+}
+
+.also_bought h5 {
+    font-size: 15px;
+}
+
+.see_all_option {
+    background-color: #E9EBEE;
+    color: black;
+    text-align: center;
+    border-radius: 10%;
+}
+
+.gambar_barangcart{
+    padding-left: 0px;
+}
+
+.detail_gambar_barangcart p{
+    margin-bottom: 0px;
+}
+
+.gambar_barangcart img {
+    height: 100px;
+    width: 100px;
+}
+
+.costumer_suggest_cart {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.per_barang {
+    padding-bottom: 20px;
+}
+
+.judul_price {
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.jarak_price_atas {
+    padding-top: 50px;
+}
+
+.judul_price_price {
+    padding-left: 0px;
+}
+
+.border_barang_cart {
+    border-left: 1px solid #E5E5E5;
+}
+
+.form_cart {
+    display: block ruby;
+}
+
+.jarak_border_cart_barang {
+    border-left: 1px solid #E5E5E5;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.rata_kiri {
+    padding-left: 0px;
+}
+
+.price_harga {
+    padding-left: 170px;
+    padding-top: 10px;
+}
+
+.list_barang_cart {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.sum_price_cart {
+    text-align: end;
+    padding-top: 10px;
+}
