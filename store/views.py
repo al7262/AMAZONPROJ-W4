@@ -5,13 +5,22 @@ from .models import User, Seller, Product, PaymentMethod, Order, Category, Order
 
 def index(request):
     categories = Category.objects.all()
-    productList = []
-    for category in categories:
-        add = Product.objects.filter(category=category.id).all()
-        product.append(add)
+    products = Product.objects.all()
     return render(request, 'store/index.html', {
         'categories': categories,
-        'listproduct': productList
+        'products': products
+    })
+
+def product(request, product_id):
+    product = Product.objects.get(pk=product_id)
+    return render(request, 'store/product.html', {
+        'product': product
+    })
+
+def category(request, category_id):
+    category = Category.objects.get(pk=category_id)
+    return render(request, 'store/category.html', {
+        'category': category
     })
 
 def slider(request):
