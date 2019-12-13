@@ -20,8 +20,8 @@
             <div class="col-md-4">
             </div>
             <div class="col-md-4">
-                <form action="/action_page.php" style="border:1px solid #ccc">
-
+                <form method="POST" action="{% url 'store:registered' %}" style="border:1px solid #ccc">
+                {% csrf_token %}
                 <div class="container">
                     <h1 class="create">Creating Account</h1>
                     <p></p>
@@ -32,8 +32,8 @@
                     <label for="email"><b>Email</b></label>
                     <input type="text" placeholder="Enter Email" name="email" required>
                 
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <label for="password"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required>
                     <p class="paschar">Passwords must be at least 6 characters.</p>
                 
                     <label for="psw-repeat"><b>Re-enter Password</b></label>
@@ -44,7 +44,7 @@
                     </label>
 
                     <div class="clearfix">
-                        <button type="submit" class="signupbtn"> <a href="{% url 'store:index' %}">Create your Amazon account</a> </button>
+                        <button type="submit" class="signupbtn">Create your Amazon account </button>
                     </div>
                     
                     <p class="agreement">By creating an account, you agree to Amazon's <a href="#" style="color:dodgerblue">Conditions of Use and Privacy Notice</a>.</p>

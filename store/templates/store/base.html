@@ -19,8 +19,14 @@
 
 </head>
 <body>
+    {% if msg %}
+        <script>
+            alert('{{ msg }}');
+        </script>
+    {% endif %}
+    
     <header>
-        <div class="container-fluid header">
+        <div class="container-fluid header" id="head">
             <div class="row">
                 <!-- Header atas -->
                 <div class="col-12 atas">
@@ -33,12 +39,21 @@
                                     <div class="line line-3"></div>
                                 </div>
                                 <ul class="nav-list">
+                                    {% if not logged %}
                                     <a href="{% url 'store:signin' %}">
                                         <div class="sign_in">
                                             <img src="../../static/img/SLIDER/sign_in.png">
                                             <p>Hello, Sign in</p>
                                         </div>
                                     </a>
+                                    {% else %}
+                                    <a href="{% url 'store:signout' %}">
+                                        <div class="sign_in">
+                                            <img src="../../static/img/SLIDER/sign_in.png">
+                                            <p>Hello, Sign out</p>
+                                        </div>
+                                    </a>
+                                    {% endif %}
                                     <p>SHOP BY CATEGORY :</p>
                                     {% for category in categories %}
                                     <li class="nav-item">
@@ -77,10 +92,12 @@
                     <div class="dua_halo">
                         <a href="">
                         <div class="hello">
-                            <p>Hello, Sign in</p>
+                            <p>Hello, {%if not logged %}Sign in{% endif %}</p>
                         </div>
                         <div class="acc">
-                            <p>Account & List</p>
+                            {% if not logged %}<p>Account & List</p>
+                            {% else %}<p>{{user.username}}</p>
+                            {% endif %}
                         </div>
                         </a>
                     </div>
@@ -138,7 +155,7 @@
     <footer class="footer">
         <div class="container-fluid">
             <div class="row size-bottom3">
-                <a href=""> Back to top </a>
+                <a href="#head"> Back to top </a>
             </div>
         </div>
     

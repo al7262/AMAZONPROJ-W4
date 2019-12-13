@@ -20,8 +20,8 @@
             <div class="col-md-4">
             </div>
             <div class="col-md-4">
-                <form action="" method="POST" style="border:1px solid #ccc">
-
+                <form action="{% url 'store:signedin' %}" method="POST" style="border:1px solid #ccc">
+                {% csrf_token %}
                 <div class="container">
                     <h1 class="create">Sign-In</h1>
                     <p></p>
@@ -33,7 +33,7 @@
                     <input type="text" placeholder="Enter Password" name="password" required>
                      
                     <div class="clearfix">
-                        <button type="submit" class="signupbtn" style="text-decoration: none;"> <a href="{% url 'store:index' %}">Create your Amazon account</a> </button>
+                        <button type="submit" class="signupbtn" style="text-decoration: none;">Create your Amazon account</button>
                     </div>
                     
                     <p class="agreement">By continuing, you agree to Amazon's <a href="#" style="color:dodgerblue">Conditions of Use and Privacy Notice.</a>.</p>
@@ -57,7 +57,7 @@
             <div class="col-md-4">
             </div>
             <div type="button" class="col-md-4 youra" >
-                <a href="signup">
+                <a href="{% url 'store:register' %}">
                 Create your Amazon account
             </a>
             </div>

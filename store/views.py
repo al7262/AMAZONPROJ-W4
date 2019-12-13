@@ -1,24 +1,40 @@
 from django.shortcuts import render
 from .models import User, Seller, Product, PaymentMethod, Order, Category, OrderDetail
-import os
+from django.contrib.auth.models import User as dbUser
+from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
+
+def checkUser(request):
+    user = request.user
+    if user.is_authenticated:
+        return user, True
+    else:
+        user.name = 'Anonymous'
+        return user, False
 
 def index(request):
     categories = Category.objects.all()
     products = Product.objects.all()
+    user, logged = checkUser(request)
     return render(request, 'store/index.html', {
         'categories': categories,
-        'products': products
+        'products': products,
+        'user': user,
+        'logged': logged
     })
 
 def product(request, product_id):
     product = Product.objects.get(pk=product_id)
+    user, logged = checkUser(request)
     return render(request, 'store/product.html', {
-        'product': product
+        'product': product,
+        'user': user,
+        'logged': logged
     })
 
 def category(request, category_id):
+    user, logged = checkUser(request)
     categories = Category.objects.all()
     products = Product.objects.filter(category=category_id).all()
     for product in products:
@@ -28,44 +44,74 @@ def category(request, category_id):
         product.photo = 'img/'+name
     return render(request, 'store/products.html', {
         'products': products,
-        'categories': categories
+        'categories': categories,
+        'user': user,
+        'logged': logged
     })
 
-def slider(request):
-    return render(request, 'store/slider-banner.html', {})
-
-def header(request):
-    return render(request, 'store/header.html', {})
-
-def cart0(request):
-    return render(request, 'store/cart0.html', {})
-
-def cart1(request):
-    return render(request, 'store/cart1.html', {})
-
-def footer(request):
-    return render(request, 'store/footer.html', {})
-
-def search(request):
-    return render(request, 'store/search.html', {})
-
 def signin(request):
-    email = User.objects.all()
-    return render(request, 'store/signin.html', {'email':email})
+    email = request.POST['email']
+    password = request.POST['password']
+    user = authenticate(request, username=email, password=password)
+    if user is not None:
+        login(request, user)
+        user, logged = checkUser(request)
+        message = "Sign in successful!"
+        return render(request, 'store/index.html', {
+            'msg': message,
+            'user': user,
+            'logged': logged})
+    else:
+        message = "Sign in unsuccesful, try again!"
+        return render(request, 'store/signin.html', {
+            'msg': message,
+            'user': user,
+            'logged': logged})
 
-def signup(request):
-    # name = request.POST('name')
-    # joinedAt = request.POST('joinedAt')
-    # email = request.POST('email')
-    # password = request.POST('email')
+def signout(request):
+    logout(request)
+    message = "Sign out succesful!"
+    user, logged = checkUser(request)
+    return render(request, 'store/index.html', {
+        'msg': message,
+        'user': user,
+        'logged': logged})
 
-    # b = User(name=name, joinedAt=joinedAt, email=email, password=password)
-    # b.save()
+def register(request):
+    user = User()
+    user.name = request.POST['name']
+    user.email = request.POST['email']
+    user.password = request.POST['password']
+    toUser = dbUser.objects.create_user(username=user.email, password=user.password)
+    user.save()
+    message = "Sign up Successful!"
+    return render(request, 'store/index.html', {
+        'msg' : message})
 
-    user = User.objects.all()
+def toSignin(request):
+    return render(request, 'store/signin.html', {})
 
-    return render(request, 'store/signamazon.html', {'user' : user})
+def toRegister(request):
+    return render(request, 'store/register.html', {})
 
 def desc(request):
     desc = Product.objects.all()
     return render(request, 'store/product_desc.html', {'desc':desc})
+
+# def slider(request):
+#     return render(request, 'store/slider-banner.html', {})
+
+# def header(request):
+#     return render(request, 'store/header.html', {})
+
+# def cart0(request):
+#     return render(request, 'store/cart0.html', {})
+
+# def cart1(request):
+#     return render(request, 'store/cart1.html', {})
+
+# def footer(request):
+#     return render(request, 'store/footer.html', {})
+
+# def search(request):
+#     return render(request, 'store/search.html', {})
