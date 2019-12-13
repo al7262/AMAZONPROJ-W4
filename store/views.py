@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import User, Seller, Product, PaymentMethod, Order, Category, OrderDetail
+import os
 
 # Create your views here.
 
@@ -18,9 +19,16 @@ def product(request, product_id):
     })
 
 def category(request, category_id):
-    category = Category.objects.get(pk=category_id)
-    return render(request, 'store/category.html', {
-        'category': category
+    categories = Category.objects.all()
+    products = Product.objects.filter(category=category_id).all()
+    for product in products:
+        fname = str(product.photo)
+        fname = fname.split('/')
+        name = fname[-1]
+        product.photo = 'img/'+name
+    return render(request, 'store/products.html', {
+        'products': products,
+        'categories': categories
     })
 
 def slider(request):
