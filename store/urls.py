@@ -12,6 +12,8 @@ urlpatterns = [
     path('cart0', views.cart0, name = 'cart0'),
     path('cart1', views.cart1, name = 'cart1'),
     path('slider', views.slider),
-    path('footer', views.footer)
+    path('footer', views.footer),
     path('search', views.search, name = 'search'),
+    path('signup', views.signup, name = 'signup'),
+    path('signin', views.signin, name = 'signin'),
 ]
