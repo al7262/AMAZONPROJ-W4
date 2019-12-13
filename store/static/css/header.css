@@ -649,3 +649,38 @@ div.col-md-3.bottom_link.khusus1 {
 .per_barang {
     padding-bottom: 20px;
 }
+
+.judul_price {
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.jarak_price_atas {
+    padding-top: 50px;
+}
+
+.judul_price_price {
+    padding-left: 0px;
+}
+
+.border_barang_cart {
+    border-left: 1px solid #E5E5E5;
+}
+
+.form_cart {
+    display: block ruby;
+}
+
+.jarak_border_cart_barang {
+    border-left: 1px solid #E5E5E5;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.rata_kiri {
+    padding-left: 0px;
+}
+
+.price_harga {
+    padding-left: 170px;
+    padding-top: 10px;
+}

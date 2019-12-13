@@ -10,3 +10,6 @@ def header(request):
 
 def cart0(request):
     return render(request, 'store/cart0.html', {})
+
+def cart1(request):
+    return render(request, 'store/cart1.html', {})
