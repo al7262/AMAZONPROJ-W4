@@ -1,0 +1,64 @@
+{% extends './base.html' %}
+
+{% block title %}Amazon{% endblock %}
+
+{% block content %}
+{% load static %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3 list_kategori_search">
+            <div>
+                <h5> Condition</h5>
+                <a href="">New</a>
+                <br>
+                <a href="">used</a>
+            </div>
+            <div>
+                <h5><strong>Departement</strong></h5>
+                <a href="">Cell Phone Charging Stations</a>
+                <br>
+                <a href="">Cell Phone Screen Protectors</a>
+                <br>
+                <a href="">Cell Phone Holsters</a>
+                <br>
+                <a href="">Flip Cell Phone Cases</a>
+                <br>
+                <a href="">See More</a>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="search_bagian1">
+                <img src="../../static/img/SLIDER/iphone11a.jpeg" alt="Iphone 11">
+                <div>
+                    <h5>SPONSORED BY APPLE</h5>
+                    <h4>New iPhone Cases.</h4>
+                    <h4>Designed by Apple</h4>
+                    <h5><a href="">Shop now</a></h5>
+                </div>
+                <img src="{% static 'img/SLIDER/iphone11b.jpeg.jpg' %}" alt="Iphone 11">
+                <div>
+                    <h5>SPONSORED BY APPLE</h5>
+                    <h4>Apple iPhone 11 Clear Case.</h4>
+                    <h4>Designed by Apple</h4>
+                    <h5><a href="">Shop now</a></h5>
+                </div>
+            </div>
+            <div class="search_bagian1">
+                <img src="{% static 'img/SLIDER/iphone11c.jpeg.jpg' %}" alt="Iphone 11">
+                <div>
+                    <h5>Simple Mobile - Apple iPhone 11 (64GB)-White</h5>
+                    <h4>More Buying Choice.</h4>
+                    <h4>$ 699.00 (1 new offer)</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+{% endblock %}
