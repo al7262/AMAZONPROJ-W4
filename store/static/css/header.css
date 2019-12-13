@@ -695,3 +695,22 @@ div.col-md-3.bottom_link.khusus1 {
     text-align: end;
     padding-top: 10px;
 }
+
+/* ======================================= Search ==================================================== */
+
+.search_bagian1 {
+    display: block Ruby;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #DDDDDD;
+}
+
+.search_bagian1 img{
+    padding-left: 50px;
+}
+
+.list_kategori_search {
+    border-right: 2px solid #DDDDDD;
+    top: 30px;
+    left: 30px;
+}
