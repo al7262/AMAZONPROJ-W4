@@ -8,39 +8,30 @@
     <div class="container-fluid top-body">
         <div class="row">
             <div class="col-md-5">
-                <img class="img-product" src="https://images-na.ssl-images-amazon.com/images/I/71Ke2RR6zSL._SX679_.jpg"> 
+                <img class="img-product" src="../../static/{{product.photo}}"> 
             </div>
             <div class="col-md-4">
-                <p class="product-name">Fintie Band for Garmin VIVOACTIVE HR, Soft Nylon Sport Straps Adjustable Replacement Watch Bands with Metal Buckle Wristband for Garmin Vivoactive HR Sports GPS Smart Watch, Black/Gray</p>
-                <p class="product-seller">by Fintie</p>
+                <p class="product-name">{{product.name}}</p>
+                <p class="product-seller">by {{seller.name}}</p>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star"></span>
-                <p class="product-price">Price: $7.99</p>
+                <p class="product-price">Price: Rp{{product.price}}</p>
                 <p class="product-color">Color: Black</p>
                 <p class="product-descript">
-                    <ul>
-                        <li>★★★★★ [Limited-time Promotion] 1.This Woven Nylon Nato Loop compatible with Garmin VIVOACTIVE HR ONLY. (Smartwatch is NOT included.)
-                        </li>
-                        <li>Premium nylon material with moderate softness and fine craftwork make it comfortable to wear and durable. Lightweight & breathable and Skin-Friendly design.
-                        </li>
-                        <li>Adjustable length design with 10 holes, the size of band can be freely adjusted, providing the best wearing experience. For small, medium, large wrists, fit 6.61"- 8.70" (168mm-221mm).
-                        </li>
-                        <li>Easy install and remove. Stainless steel buckle clasp with premium soft Woven Nylon combined to form a unique style.
-                        </li>
-                        <li>Available in a lot of different colors, fitting perfectly your style and outfit. Match sports and leisure style with stylish and practical choice for men, women. Package include: 1 x Nylon Replacement Watch Band, 2 x Pin Removal Tools.
-                        </li>
-                    </ul>
+                    {% autoescape off %}
+                    {{product.details}}
+                    {% endautoescape %}
                 </p>
             </div>
             <div class="col-md-2 border-utama">
-                <p class="price-pro">$7.99</p>
+                <p class="price-pro">Rp{{product.price}}</p>
                 <p></p>
                 <p class="address-user">This item ships to Address. Get it by DAY, DATE - DAY, DATE Choose this date at checkout.</p>
                 <p></p>
-                <p class="stock-product">In Stock.</p>
+                <p class="stock-product">Stock: {{product.stock}}</p>
                 
                 <div class="dropdown">
                     <button class="btn btn-secondary" type="button" data-toggle="dropdown">Quantity

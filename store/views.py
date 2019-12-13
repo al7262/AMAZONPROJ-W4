@@ -31,9 +31,18 @@ def index(request):
 
 def product(request, product_id):
     product = Product.objects.get(pk=product_id)
+    seller = Seller.objects.get(pk=product.seller_id)
+    category = Category.objects.get(pk=product.category_id)
     user, logged = checkUser(request)
-    return render(request, 'store/product.html', {
+    
+    fname = str(product.photo)
+    fname = fname.split('/')
+    name = fname[-1]
+    product.photo = 'img/'+name
+    return render(request, 'store/product_desc.html', {
         'product': product,
+        'seller': seller,
+        'category': category,
         'user': user,
         'logged': logged
     })
