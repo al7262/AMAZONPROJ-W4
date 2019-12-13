@@ -102,7 +102,7 @@
                         {% for product in products %}
                             {% if product.category == category.id %}
                                 <div class="carousel-inner row w-100 mx-auto" role="listbox">
-                                    <div class="carousel-item col-md-2 active">
+                                    <div class="carousel-item col-md-2 {%if forloop.first %} active {% endif %}">
                                         <div class="box-200 item">
                                             <img src="../../static/{{product.photo}}" alt="{{product.photo}}">
                                             <a class="item-btn" href="{% url 'post:product' product.id %}">Detail Item</a>
@@ -111,7 +111,7 @@
                                 </div>
                             {% else %}
                             <div class="carousel-inner row w-100 mx-auto" role="listbox">
-                                <div class="carousel-item col-md-2 active">
+                                <div class="carousel-item col-md-2 {%if forloop.first %} active {% endif %}">
                                     <div class="box-200 item">
                                         this is else
                                     </div>
@@ -120,7 +120,7 @@
                             {% endif %}
                         {% empty %}
                             <div class="carousel-inner row w-100 mx-auto" role="listbox">
-                                <div class="carousel-item col-md-2 active">
+                                <div class="carousel-item col-md-2 {%if forloop.first %} active {% endif %}">
                                     <div class="box-200 item">
                                         this is empty
                                     </div>
