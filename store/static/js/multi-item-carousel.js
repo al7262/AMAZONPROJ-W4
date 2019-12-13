@@ -21,6 +21,28 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
 });
 
 // for product 2
+$('#carouselExample1').on('slide.bs.carousel', function (e) {
+
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 6;
+    var totalItems = $('.product1 .carousel-item').length;
+    
+    if (idx >= totalItems-(itemsPerSlide-1)) {
+        var it = itemsPerSlide - (totalItems - idx);
+        for (var i=0; i<it; i++) {
+            // append slides to end
+            if (e.direction=="left") {
+                $('.product1 .carousel-item').eq(i).appendTo('.product1 .carousel-inner');
+            }
+            else {
+                $('.product1 .carousel-item').eq(0).appendTo('.product1 .carousel-inner');
+            }
+        }
+    }
+});
+
+// for product 3
 $('#carouselExample2').on('slide.bs.carousel', function (e) {
 
     var $e = $(e.relatedTarget);
@@ -42,7 +64,7 @@ $('#carouselExample2').on('slide.bs.carousel', function (e) {
     }
 });
 
-// for product 3
+// for product 4
 $('#carouselExample3').on('slide.bs.carousel', function (e) {
 
     var $e = $(e.relatedTarget);
@@ -59,28 +81,6 @@ $('#carouselExample3').on('slide.bs.carousel', function (e) {
             }
             else {
                 $('.product3 .carousel-item').eq(0).appendTo('.product3 .carousel-inner');
-            }
-        }
-    }
-});
-
-// for product 4
-$('#carouselExample4').on('slide.bs.carousel', function (e) {
-
-    var $e = $(e.relatedTarget);
-    var idx = $e.index();
-    var itemsPerSlide = 6;
-    var totalItems = $('.product4 .carousel-item').length;
-    
-    if (idx >= totalItems-(itemsPerSlide-1)) {
-        var it = itemsPerSlide - (totalItems - idx);
-        for (var i=0; i<it; i++) {
-            // append slides to end
-            if (e.direction=="left") {
-                $('.product4 .carousel-item').eq(i).appendTo('.product4 .carousel-inner');
-            }
-            else {
-                $('.product4 .carousel-item').eq(0).appendTo('.product4 .carousel-inner');
             }
         }
     }

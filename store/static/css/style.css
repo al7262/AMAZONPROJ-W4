@@ -72,16 +72,16 @@
 }
 
 .product, 
-.product2, 
-.product3,
-.product4 {
+.product1, 
+.product2,
+.product3 {
     padding: 20px 0;
 }
 
 .product .carousel-control-prev, 
+.product1 .carousel-control-prev, 
 .product2 .carousel-control-prev, 
-.product3 .carousel-control-prev, 
-.product4 .carousel-control-prev {
+.product3 .carousel-control-prev {
     position: absolute;
     top: 50px;
     align-items: center;
@@ -95,9 +95,9 @@
 }
 
 .product .carousel-control-next, 
+.product1 .carousel-control-next, 
 .product2 .carousel-control-next, 
-.product3 .carousel-control-next, 
-.product4 .carousel-control-next {
+.product3 .carousel-control-next {
     position: absolute;
     top: 50px;
     align-items: center;
