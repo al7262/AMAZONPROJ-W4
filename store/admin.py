@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+=======
+>>>>>>> branchlian
 from django.contrib import admin
 
 from .models import User, Seller, Product, PaymentMethod, Order, Category, OrderDetail
