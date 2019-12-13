@@ -100,12 +100,12 @@
                 <div class="col-md-12">
                     <div id="carouselExample{{category.id}}" class="carousel slide product{{category.id}}" data-ride="carousel" data-interval="0">
                         {% for product in products %}
-                            {% if product.category == category.id %}
+                            {% ifequal product.category_id category.id %}
                                 <div class="carousel-inner row w-100 mx-auto" role="listbox">
                                     <div class="carousel-item col-md-2 {%if forloop.first %} active {% endif %}">
                                         <div class="box-200 item">
                                             <img src="../../static/{{product.photo}}" alt="{{product.photo}}">
-                                            <a class="item-btn" href="{% url 'post:product' product.id %}">Detail Item</a>
+                                            <a class="item-btn" href="{% url 'store:product' product.id %}">Detail Item</a>
                                         </div>
                                     </div>
                                 </div>
@@ -117,7 +117,7 @@
                                     </div>
                                 </div>
                             </div>
-                            {% endif %}
+                            {% endifequal %}
                         {% empty %}
                             <div class="carousel-inner row w-100 mx-auto" role="listbox">
                                 <div class="carousel-item col-md-2 active">

@@ -16,6 +16,11 @@ def checkUser(request):
 def index(request):
     categories = Category.objects.all()
     products = Product.objects.all()
+    for product in products:
+        fname = str(product.photo)
+        fname = fname.split('/')
+        name = fname[-1]
+        product.photo = 'img/'+name
     user, logged = checkUser(request)
     return render(request, 'store/index.html', {
         'categories': categories,
