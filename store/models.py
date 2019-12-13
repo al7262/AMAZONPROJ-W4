@@ -41,7 +41,6 @@ class Product(models.Model):
     name = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     details = RichTextField()
-<<<<<<< HEAD
     photo = models.ImageField(upload_to='store/static/img')
     rate = models.DecimalField(max_digits=2,decimal_places=1)
     brandName = models.CharField(max_length=200)
@@ -67,6 +66,3 @@ class OrderDetail(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     def __str__(self):
         return "Detail of" + str(self.order)
-=======
-    photo = models.ImageField()
->>>>>>> development
