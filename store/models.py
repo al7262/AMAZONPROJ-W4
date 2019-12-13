@@ -17,12 +17,9 @@ class Seller(models.Model):
 
 class User(models.Model):
     name = models.CharField(max_length=200)
-    address = models.TextField()
-    contact = models.CharField(max_length=15)
     joinedAt = models.DateField(auto_now_add=True)
     email = models.CharField(max_length=200)
     password = models.CharField(max_length=200)
-    username = models.CharField(max_length=50)
 
     def __str__(self):
         return self.name
@@ -55,7 +52,17 @@ class Product(models.Model):
         return self.name
 
 class Order(models.Model):
-    product = models.ManyToManyField(Product)
     payment = models.ForeignKey(PaymentMethod, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    contact = models.CharField(max_length=15)
     shipAddres = models.TextField()
+
+    def __str__(self):
+        return "Order from" + str(self.user)
+
+class OrderDetail(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity = models.IntegerField()
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    def __str__(self):
+        return "Detail of" + str(self.order)
