@@ -1,0 +1,35 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block content%}
+
+<div class="container-fluid">
+    <div class="row col-md-12 shadow-sm result-head">
+        <p>{{ products|length }} results for search</p> 
+    </div>
+    <div class="row">
+        <div class="col-md-2 result-category">
+            <p><strong>Category</strong></p>
+            {% for category in categories %}
+            <p><a href="{% url 'store:category' category.id %}">{{category.name}}</a></p>
+            {% endfor %}
+        </div>
+        <div class="col-md-10 outer-product">
+            <div class="row">
+                {% for product in products %}
+                <div class="col-md-3">
+                    <div class="box-product">
+                        <img src="../../static/{{product.photo}}" alt="{{product.photo}}">
+                        <a href>{{product.name}}</a>
+                        <p>Rp{{product.price}}</p>
+                        </br>
+                        <p style="color:gray;">ship to Indonesia</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
