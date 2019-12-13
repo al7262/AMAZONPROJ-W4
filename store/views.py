@@ -50,19 +50,22 @@ def search(request):
     return render(request, 'store/search.html', {})
 
 def signin(request):
-    email = User.objects.get(self.email)
+    email = User.objects.all()
     return render(request, 'store/signin.html', {'email':email})
 
 def signup(request):
-    name = request.POST('name')
-    joinedAt = request.POST('joinedAt')
-    email = request.POST('email')
-    password = request.POST('email')
+    # name = request.POST('name')
+    # joinedAt = request.POST('joinedAt')
+    # email = request.POST('email')
+    # password = request.POST('email')
 
-    b = User(name=name, joinedAt=joinedAt, email=email, password=password)
-    b.save()
+    # b = User(name=name, joinedAt=joinedAt, email=email, password=password)
+    # b.save()
 
     user = User.objects.all()
 
     return render(request, 'store/signamazon.html', {'user' : user})
 
+def desc(request):
+    desc = Product.objects.all()
+    return render(request, 'store/product_desc.html', {'desc':desc})
