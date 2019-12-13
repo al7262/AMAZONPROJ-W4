@@ -76,6 +76,7 @@
 .product2,
 .product3 {
     padding: 20px 0;
+    min-height: 240px;
 }
 
 .product .carousel-control-prev, 
@@ -181,7 +182,6 @@
 
 .box-product{
     width: 100%;
-    border: 1px solid lightgray;
 }
 
 .box-product img{

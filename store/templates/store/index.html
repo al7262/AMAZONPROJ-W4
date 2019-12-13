@@ -109,23 +109,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            {% else %}
-                            <div class="carousel-inner row w-100 mx-auto" role="listbox">
-                                <div class="carousel-item col-md-2 {%if forloop.first %} active {% endif %}">
-                                    <div class="box-200 item">
-                                        this is else
-                                    </div>
-                                </div>
-                            </div>
                             {% endifequal %}
                         {% empty %}
-                            <div class="carousel-inner row w-100 mx-auto" role="listbox">
-                                <div class="carousel-item col-md-2 active">
-                                    <div class="box-200 item">
-                                        this is empty
-                                    </div>
-                                </div>
-                            </div>
                         {% endfor %}
                         <a class="carousel-control-prev" href="#carouselExample{{category.id}}" role="button" data-slide="prev">
                             <span class="arrow back-product" aria-hidden="true"></span>
