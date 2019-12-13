@@ -18,5 +18,5 @@ urlpatterns = [
 =======
     path('slider', views.slider),
     path('footer', views.footer)
->>>>>>> branchlian
+
 ]
